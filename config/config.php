@@ -44,6 +44,13 @@ return array(
         'user_private_key',
         'user_info_data',
         'my_pages',
+        '_imis_ids',
+        '_roster',
+        '_srv_answers',
+        '_srv_latest_responses',
+        '_srv_questions',
+        '_srv_survey_results',
+        '_srv_surveys',
     ),
 
     // List of compound indexes.
@@ -70,7 +77,7 @@ return array(
             'userfield' => array('userid'),
             'otherfields' => array('course'),
         ),
-        'message_contacts' => array(//both fields are user.id values
+        'message_contacts' => array( //both fields are user.id values
             'userfield' => array('userid', 'contactid'),
             'otherfields' => array(),
         ),
@@ -90,7 +97,7 @@ return array(
             'userfield' => array('userid'),
             'otherfields' => array('cohortid'),
         ),
-        'certif_completion' => array(  // mdl_certcomp_ceruse_uix (unique)
+        'certif_completion' => array( // mdl_certcomp_ceruse_uix (unique)
             'userfield' => array('userid'),
             'otherfields' => array('certifid'),
         ),
@@ -110,7 +117,7 @@ return array(
             'userfield' => array('userid'),
             'otherfields' => array('badgeid'),
         ),
-       'assign_submission' => array( // unique key mdl_assisubm_assusegroatt_uix
+        'assign_submission' => array( // unique key mdl_assisubm_assusegroatt_uix
             'userfield' => array('userid'),
             'otherfields' => array('assignment', 'groupid', 'attemptnumber'),
         ),
